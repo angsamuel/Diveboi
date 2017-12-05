@@ -47,11 +47,16 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Cursor.cs" />
+     <Compile Include="Assets\DiveTeam.cs" />
+     <Compile Include="Assets\MainMenuController.cs" />
      <Compile Include="Assets\Place.cs" />
      <Compile Include="Assets\Player.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\Hero.cs" />
      <Compile Include="Assets\Stairs.cs" />
      <Compile Include="Assets\Tile.cs" />
+     <Compile Include="Assets\Unit.cs" />
+     <Compile Include="Assets\WinController.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

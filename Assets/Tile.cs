@@ -23,7 +23,11 @@ public class Tile : MonoBehaviour {
 		gameController.MoveCursor (xcord, ycord);
 		Player player = gameController.player;
 		if (Mathf.Abs (player.xcord - xcord) < 2 && Mathf.Abs (player.ycord - ycord) < 2) {
-			gameController.cursor.MoveMode ();
+			if (gameController.GetUnit (xcord, ycord) != null) {
+				gameController.cursor.AttackMode ();
+			} else {
+				gameController.cursor.MoveMode ();
+			}
 		} else {
 			gameController.cursor.LookMode ();
 		}
@@ -36,8 +40,10 @@ public class Tile : MonoBehaviour {
 	void OnMouseDown(){
 		if (active) {
 			Player player = gameController.player;
-			if (Mathf.Abs (player.xcord - xcord) < 2 && Mathf.Abs (player.ycord - ycord) < 2) {
-				gameController.MovePlayer (xcord, ycord);
+			if (gameController.GetUnit (xcord, ycord) != null) {
+				//gameController.cursor.AttackMode ();
+			} else {
+				gameController.player.Move(xcord, ycord);
 			}
 		}
 	}

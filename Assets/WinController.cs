@@ -1,16 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Player : Unit {
+
+public class WinController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		base.Start ();
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	public void BackToMain(){
+		SceneManager.LoadScene("MainMenu");
+
+
 	}
 }
